@@ -9,7 +9,7 @@ async function input(){
         {name: 'name',message: 'Enter the name of the task',type: 'input'},
         {name: 'detail',message: 'Enter the detail of the task',type: 'input'},
     ])
-
+    
     return answers
 }
 
@@ -23,6 +23,7 @@ const askQuestion = async()=>{
         const userRes=await input()
         todoArray.push(userRes)
         const confirmQ=await inquire.prompt([{name:'confirm',message:'Do you want to add more task?', type: 'confirm'}])
+        
         if(confirmQ.confirm){
             loop=true
         }
@@ -59,3 +60,5 @@ export default async function addTask(){
         process.exit(1)
     }
 }
+
+// addTask();
