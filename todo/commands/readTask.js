@@ -33,4 +33,4 @@ export default async function readTask(){
     }
 }
 
-// readTask()
+readTask()
